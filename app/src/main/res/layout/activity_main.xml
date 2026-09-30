@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/ink"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Estado del permiso -->
+        <LinearLayout
+            android:id="@+id/cardPermiso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/card_warn"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/txtPermiso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/ink"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnPermiso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Activar acceso a notificaciones" />
+        </LinearLayout>
+
+        <!-- Total del día -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/card_main"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recibido hoy"
+                android:textColor="@color/on_primary_soft"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/ 0.00"
+                android:textColor="@color/on_primary"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtResumen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/on_primary_soft"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnProbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Probar voz" />
+
+            <Button
+                android:id="@+id/btnRepetir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Repetir último" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Seccion"
+            android:text="Pagos de hoy" />
+
+        <LinearLayout
+            android:id="@+id/listaPagos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card"
+            android:orientation="vertical" />
+
+        <TextView
+            style="@style/Seccion"
+            android:text="Ajustes" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <Switch android:id="@+id/swVoz" style="@style/Ajuste" android:text="Anunciar pagos en voz alta" />
+            <Switch android:id="@+id/swDing" style="@style/Ajuste" android:text="Sonido “ding” antes de hablar" />
+            <Switch android:id="@+id/swVol" style="@style/Ajuste" android:text="Subir volumen al máximo al anunciar" />
+            <Switch android:id="@+id/swNombre" style="@style/Ajuste" android:text="Decir el nombre de quien paga" />
+            <Switch android:id="@+id/swRepetir" style="@style/Ajuste" android:text="Repetir el anuncio 2 veces" />
+            <Switch android:id="@+id/swCualquier" style="@style/Ajuste" android:text="Escuchar también otras apps (Caja, BanBif, etc.)" />
+
+            <Button
+                android:id="@+id/btnBateria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Evitar que Android la apague (batería)" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Seccion"
+            android:text="Notificaciones no reconocidas" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Si un pago real no se anunció, aparecerá aquí. Mándame ese texto y ajusto las reglas."
+            android:textColor="@color/muted"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/listaNoReconocidas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/card"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btnBorrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Borrar historial" />
+    </LinearLayout>
+</ScrollView>

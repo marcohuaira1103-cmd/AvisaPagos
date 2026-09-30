@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AvisaPagos</string>
+    <string name="service_desc">Lee las notificaciones de Yape, Plin y bancos para anunciar en voz alta los pagos recibidos.</string>
+</resources>
